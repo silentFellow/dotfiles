@@ -3,9 +3,31 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # installing utilities: 
-sudo apt-get install -y zsh fzf exa plank alacritty git nodejs npm vlc python3-pip
+sudo apt-get install -y zsh fzf exa plank alacritty git nodejs npm vlc python3-pip tar
 sudo dpkg -i ./bat/bat_0.15.4_amd64.deb
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# unpacking zip files:
+tar -xJvf ./themes/themes.tar.xz
+tar -xJvf ./gestures/gestures.tar.xz
+tar -xJvf ./alacritty/alacritty.tar.xz
+tar -xJvf ./nvim/nvim.tar.xz
+tar -xJvf ./bat/bat.tar.xz
+tar -xJvf ./fonts/fonts.tar.xz
+tar -xJvf ./icons/icons.tar.xz
+tar -xJvf ./zsh/zsh.tar.xz
+tar -xjvf ./plank_themes/plank_themes.tar.xz
+
+# deleting the zip files:
+rm -rf ./themes/themes.tar.xz
+rm -rf ./gestures/gestures.tar.xz
+rm -rf ./alacritty/alacritty.tar.xz
+rm -rf ./nvim/nvim.tar.xz
+rm -rf ./bat/bat.tar.xz
+rm -rf ./fonts/fonts.tar.xz
+rm -rf ./icons/icons.tar.xz
+rm -rf ./zsh/zsh.tar.xz
+rm -rf ./plank_themes/plank_themes.tar.xz
 
 # creating necessary direcories:
 if [ ! -e ~/.local/share/fonts/ ]; then
@@ -25,6 +47,9 @@ mkdir -p ~/.config/alacritty/
 
 # installing necessary fonts:
 cp -r ./fonts/MesloGL/* ~/.local/share/fonts/
+cp -r ./fonts/Hack/* ~/.local/share/fonts/
+cp -r ./fonts/FiraCode/* ~/.local/share/fonts/
+cp -r ./fonts/Terminus/* ~/.local/share/fonts/
 fc-cache -f -v
 
 # coping theme settings:
