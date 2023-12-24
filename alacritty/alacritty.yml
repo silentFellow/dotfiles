@@ -1,0 +1,63 @@
+# fonts
+font:
+  normal:
+    family: Hack Nerd Font Mono
+    style: Regular
+  bold:
+    family: Hack Nerd Font Mono
+    style: Bold
+  italic:
+    family: Hack Nerd Font Mono
+    style: Italic
+  bold_italic:
+    family: Hack Nerd Font Mono
+    style: Bold Italic
+  size: 14
+
+# theme
+colors:
+  primary:
+    foreground: '#ebdbb2'
+    background: '#272727'
+  selection:
+    background: '#655b53'
+    text: '#ebdbb2'
+  cursor:
+    text: '#8fee96'
+  url_color: '#d65c0d'
+
+# cursor
+cursor:
+  style: Block
+
+# terminal
+scrollback: 5000
+window:
+  opacity: 0.72
+  startup_mode: Maximized
+  padding:
+    x: 6
+    y: 12
+
+# 16 terminal colors
+colors:
+  black: '#2f2f2f'
+  red: '#d75f5f'
+  green: '#d4d232'
+  yellow: '#a5865a'
+  blue: '#22c3a1'
+  magenta: '#775759'
+  cyan: '#84edb9'
+  white: '#c0b18b'
+  bright_black: '#656565'
+  bright_red: '#d75f5f'
+  bright_green: '#8fee96'
+  bright_yellow: '#cd950c'
+  bright_blue: '#22c3a1'
+  bright_magenta: '#775759'
+  bright_cyan: '#84edb9'
+  bright_white: '#d8d8d8'
+
+# other settings
+bell:
+  alert: silent
