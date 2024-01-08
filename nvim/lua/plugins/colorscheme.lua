@@ -1,8 +1,16 @@
+local Config = function()
+  return {
+    require("solarized-osaka").setup({
+      transparent = true
+    }),
+
+    vim.cmd[[colorscheme solarized-osaka]]
+  }
+end
+
 return {
-  "bluz/vim-nightfly-colors", 
-  lazy = false, 
-  priority = 9999, 
-  config = function()
-    vim.cmd("colorscheme nightfly")
-  end
+  "craftzdog/solarized-osaka.nvim",
+  lazy = true,
+  priority = 1000,
+  config = Config
 }

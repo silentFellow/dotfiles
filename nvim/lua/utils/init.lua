@@ -1,1 +1,1 @@
--- require("utils.color-switch")
+require("utils.debug")

@@ -2,12 +2,16 @@
 sudo apt-get update
 sudo apt-get upgrade
 
-# installing utilities: 
+# installing utilities:
 sudo add-apt-repository ppa:aslatter/ppa -y # for alacritty
 sudo apt-get update
-sudo apt-get install -y zsh fzf exa plank alacritty git nodejs npm vlc python3-pip tar preload neofetch ripgrep
+sudo apt-get install -y zsh fzf exa plank alacritty git nodejs npm vlc python3-pip tar preload neofetch ripgrep luarocks golang-go python3.10-venv unzip tmux
 sudo dpkg -i ./bat/bat_0.15.4_amd64.deb
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# installing video downloader => optioanal
+sudo apt-get install flatpak
+flatpak install flathub com.github.unrud.VideoDownloader
 
 # installing nvim:
 chmod u+x ./nvim_install/nvim.appimage
@@ -37,7 +41,7 @@ if [ ! -e ~/.local/share/fonts/ ]; then
 fi
 if [ ! -e ~/.local/share/plank/ ]; then
 	mkdir -p ~/.local/share/plank/
-    mkdir -p ~/.local/share/plank/themes/
+	mkdir -p ~/.local/share/plank/themes/
 fi
 mkdir -p ~/.themes/
 mkdir -p ~/.icons/
@@ -65,13 +69,13 @@ cp -r ./themes/* ~/.themes/
 cp -r ./icons/* ~/.icons/
 cp -r ./plank_themes/* ~/.local/share/plank/themes
 
-# onfiguring kitty:
-cp -r ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+# onfiguring alacritty:
+cp -r ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.toml
 
-# configuring zsh: 
+# configuring zsh:
 cp ./zsh/zshrc ~/.zshrc
 cp -r ./zsh/oh-my-zsh ~/.oh-my-zsh
-cp ./zsh/p10k.zsh ~/.p10k.zsh 
+cp ./zsh/p10k.zsh ~/.p10k.zsh
 
 # configuring tmux:
 cp ./tmux/tmux.conf ~/.config/tmux/
@@ -94,7 +98,7 @@ sudo chsh -s /bin/zsh
 # sudo apt-get install grub-customizer
 
 # autoremoving unwanted stuffs:
-sudo apt-get purge gnome-terminal 
+sudo apt-get purge gnome-terminal
 sudo apt-get autoremove
 sudo apt-get autoclean
 
